@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@keyframes expandCircle1 {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.54;
+  }
+  100% {
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+.home {
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 100vh;
+}
+.home .title {
+  text-align: center;
+  color: dodgerblue;
+  padding-top: 30px;
+}
+.home .subtitle {
+  text-align: center;
+  width: 800px;
+  margin: 30px auto 60px;
+  color: #ddd;
+}
+.home .my-favorite {
+  position: relative;
+  width: 800px;
+  margin: auto;
+}
+.home .my-favorite .inner {
+  display: flex;
+}
+.home .my-favorite .circle {
+  position: absolute;
+  background-color: #6bb2c1;
+  width: 120px;
+  height: 120px;
+  opacity: 0;
+  border-radius: 100%;
+}
+.home .my-favorite .circle.active {
+  animation: expandCircle1 3s linear infinite;
+}
+.home .my-favorite .circle1 {
+  animation-delay: 0s;
+}
+.home .my-favorite .circle2 {
+  animation-delay: 2s;
+}
+.home .my-favorite .circle3 {
+  animation-delay: 4s;
+}
+.home .my-favorite .circle4 {
+  animation-delay: 6s;
+}
+.home .my-favorite .circles1 {
+  position: absolute;
+  top: 40px;
+  left: 340px;
+}
+.home .my-favorite .circles2 {
+  position: absolute;
+  top: 220px;
+  left: 40px;
+}
+.home .my-favorite .circles3 {
+  position: absolute;
+  top: 220px;
+  right: 170px;
+}
+.home .my-favorite .item .img {
+  width: 200px;
+  height: 200px;
+}
+.home .my-favorite .item .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  transition: all 0.3s;
+}
+.home .my-favorite .item .img img:hover {
+  box-shadow: 0 0 10px red;
+}
+.home .my-favorite .item h2 {
+  margin-top: 10px;
+}
+.home .my-favorite .item p {
+  width: 200px;
+}
+.home .my-favorite .item:nth-child(1) {
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+}
+.home .my-favorite .item:nth-child(2) {
+  position: absolute;
+  top: 180px;
+}
+.home .my-favorite .item:nth-child(3) {
+  position: absolute;
+  right: 0;
+  top: 180px;
+}
+.error {
+  min-height: 100vh;
+  background-color: #272041;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

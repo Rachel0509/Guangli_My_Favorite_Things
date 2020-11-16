@@ -1,0 +1,115 @@
+.home {
+    background-image : url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size  : 100% 100%;
+    min-height       : 100vh;
+
+    .title {
+        text-align : center;
+        color      : dodgerblue;
+        padding-top: 30px;
+    }
+
+    .subtitle {
+        text-align: center;
+        width     : 800px;
+        margin    : 30px auto 60px;
+        color     : #ddd;
+    }
+
+    .my-favorite {
+        position: relative;
+        width   : 800px;
+        margin  : auto;
+
+        .inner{
+            display : flex;
+        }
+
+        .circle {
+            position: absolute;
+            background-color: #6bb2c1;
+            width: 120px;
+            height: 120px;
+            opacity: 0;
+            border-radius: 100%;
+            &.active{
+                animation: expandCircle1 3s linear infinite;
+            }
+          }
+  
+          .circle1 {
+            animation-delay: 0s;
+          }
+  
+          .circle2 {
+            animation-delay: 2s;
+          }
+  
+          .circle3 {
+            animation-delay: 4s;
+          }
+  
+          .circle4 {
+            animation-delay: 6s;
+          }
+          .circles1 {
+            position: absolute;
+            top: 40px;
+            left: 340px;
+          }
+          .circles2 {
+            position: absolute;
+            top: 220px;
+            left: 40px;
+          }
+          .circles3 {
+            position: absolute;
+            top: 220px;
+            right: 170px;
+          }
+
+        .item {
+            .img {
+                width : 200px;
+                height: 200px;
+
+                img {
+                    width        : 100%;
+                    height       : 100%;
+                    border-radius: 100%;
+                    transition   : all 0.3s;
+
+                    &:hover {
+                        box-shadow: 0 0 10px red;
+                    }
+                }
+            }
+
+            h2 {
+                margin-top: 10px;
+            }
+
+            p{
+                width: 200px;
+            }
+
+            &:nth-child(1) {
+                position   : absolute;
+                left       : 50%;
+                margin-left: -100px;
+            }
+
+            &:nth-child(2) {
+                position: absolute;
+                top     : 180px;
+            }
+
+            &:nth-child(3) {
+                position: absolute;
+                right   : 0;
+                top     : 180px;
+            }
+        }
+    }
+}
